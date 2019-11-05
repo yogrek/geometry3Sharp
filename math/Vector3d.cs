@@ -28,6 +28,11 @@ namespace g3
 		static public readonly Vector3d MaxValue = new Vector3d(double.MaxValue,double.MaxValue,double.MaxValue);
 		static public readonly Vector3d MinValue = new Vector3d(double.MinValue,double.MinValue,double.MinValue);
 
+        static public readonly Vector3d Left = new Vector3d(-1.0f, 0.0f, 0.0f);
+        static public readonly Vector3d Right = new Vector3d(1.0, 0.0f, 0.0f);
+        static public readonly Vector3d Up = new Vector3d(0.0f, 1.0f, 0.0f);
+        static public readonly Vector3d Forward = new Vector3d(0.0f, 0.0f, 1.0f);
+
         public double this[int key]
         {
             get { return (key == 0) ? x : (key == 1) ? y : z; }

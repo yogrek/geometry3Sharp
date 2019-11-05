@@ -34,6 +34,11 @@ namespace g3
 		static public readonly Vector3f MaxValue = new Vector3f(float.MaxValue,float.MaxValue,float.MaxValue);
 		static public readonly Vector3f MinValue = new Vector3f(float.MinValue,float.MinValue,float.MinValue);
 
+        static public readonly Vector3f Left = new Vector3f(-1.0f, 0.0f, 0.0f);
+        static public readonly Vector3f Right = new Vector3f(1.0, 0.0f, 0.0f);
+        static public readonly Vector3f Up = new Vector3f(0.0f, 1.0f, 0.0f);
+        static public readonly Vector3f Forward = new Vector3f(0.0f, 0.0f, 1.0f);
+
         public float this[int key]
         {
             get { return (key == 0) ? x : (key == 1) ? y : z; }
