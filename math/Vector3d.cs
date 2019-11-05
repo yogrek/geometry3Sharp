@@ -164,6 +164,21 @@ namespace g3
             return UnitCross(ref v2);
         }
 
+        public static Vector3d Project(Vector3d vector, Vector3d onNormal)
+        {
+            double length = Dot(onNormal, onNormal);
+            if (length < MathUtil.Epsilon)
+            {
+                return Vector3d.Zero;
+            }
+
+            return onNormal * Vector3d.Dot(vector, onNormal) / length;
+        }
+
+        public static Vector3d ProjectOnPlane(Vector3d vector, Vector3d planeNormal)
+        {
+            return vector - Project(vector, planeNormal);
+        }
 
         public double AngleD(Vector3d v2)
         {

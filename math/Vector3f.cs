@@ -157,6 +157,22 @@ namespace g3
             return n;
         }
 
+        public static Vector3f Project(Vector3f vector, Vector3f onNormal)
+        {
+            float length = Dot(onNormal, onNormal);
+            if (length < MathUtil.Epsilon)
+            {
+                return Vector3f.Zero;
+            }
+
+            return onNormal * Vector3f.Dot(vector, onNormal) / length;
+        }
+
+        public static Vector3f ProjectOnPlane(Vector3f vector, Vector3f planeNormal)
+        {
+            return vector - Project(vector, planeNormal);
+        }
+
         public float AngleD(Vector3f v2) {
             float fDot = MathUtil.Clamp(Dot(v2), -1, 1);
             return (float)(Math.Acos(fDot) * MathUtil.Rad2Deg);
