@@ -26,6 +26,11 @@ namespace g3
 		static public readonly Vector2d MaxValue = new Vector2d(double.MaxValue,double.MaxValue);
 		static public readonly Vector2d MinValue = new Vector2d(double.MinValue,double.MinValue);
 
+        static public readonly Vector2d Left = new Vector2d(-1.0f, 0.0f);
+        static public readonly Vector2d Right = new Vector2d(1.0f, 0.0f);
+        static public readonly Vector2d Up = new Vector2d(0.0f, 1.0f);
+        static public readonly Vector2d Down = new Vector2d(0.0f, -1.0f);
+
         public static Vector2d FromAngleRad(double angle) {
             return new Vector2d(Math.Cos(angle), Math.Sin(angle));
         }

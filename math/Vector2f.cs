@@ -31,6 +31,11 @@ namespace g3
 		static public readonly Vector2f MaxValue = new Vector2f(float.MaxValue,float.MaxValue);
 		static public readonly Vector2f MinValue = new Vector2f(float.MinValue,float.MinValue);
 
+        static public readonly Vector2f Left = new Vector2f(-1.0f, 0.0f);
+        static public readonly Vector2f Right = new Vector2f(1.0f, 0.0f);
+        static public readonly Vector2f Up = new Vector2f(0.0f, 1.0f);
+        static public readonly Vector2f Down = new Vector2f(0.0f, -1.0f);
+
         public float this[int key]
         {
             get { return (key == 0) ? x : y; }
